@@ -3,7 +3,7 @@ import java.awt.*;
 /** An instance of this class is a J*Man.
  There should at most one J*Man in a game board at a time*/
 public class JMan extends Piece {
-    
+	
 	
     /** Constructor: a new J*Man at position (x, y) on Map m
      with color red if c = 0, green if c = 1, and yellow if c = 2. */

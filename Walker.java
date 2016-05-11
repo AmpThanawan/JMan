@@ -1,7 +1,16 @@
 import java.awt.Color;
-
+/*
+ *  
+ * Create walker and run walker right left up and down .
+ * @author Thanawan Sean-in
+ * 
+ */
 public class Walker extends Piece{
-
+	
+	/*
+	 * Create Walker
+	 * 
+	 */
 	public Walker(int x, int y, int c, Map m) {
 		 super(Piece.WALKER, m);
 		 this.setX(x);
@@ -28,6 +37,12 @@ public class Walker extends Piece{
         }
         
     }
+	/*
+	 *  
+	 * Act of Walker
+	 * Move and Change Direction of walker.
+	 * 
+	 */
 	@Override
 	public void act() {
 		if(Piece.rand(0, 2) == 1){
@@ -43,8 +58,15 @@ public class Walker extends Piece{
 		}
 		
 	}
-	public String toString(){
-		return "" ;
- 	}
+	/*
+	 *  
+	 * Check walker .
+	 * @return String of Walker
+	 * 
+	 */
+	 public String toString() {
+	        String color= "";
+	        return getColorWord() + " Walker at (" + getX() + ", " + getY() + ")";
+	    }
 
 }

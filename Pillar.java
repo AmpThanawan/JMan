@@ -1,12 +1,13 @@
 import java.awt.Color;
 
+/*
+ *  
+ * Create Pillar on map .
+ * @author Thanawan Sean-in
+ * 
+ */
 public class Pillar extends Piece{
 
-	
-	
-	
-	
-	
 	
 	
 	public Pillar(int x, int y, int c, Map m) {
@@ -34,23 +35,34 @@ public class Pillar extends Piece{
         }
        
    }
-
+	/*
+	 *  
+	 * Act of Pillar  .
+	 * Random for Change Color .
+	 * 
+	 */
 	@Override
 	public void act() {
 		if(Piece.rand(0, 2) == 1){
-			if(Piece.rand(0, 3) == 0){
+			if(Piece.rand(0, 2) == 0){
 				this.setColor(Color.GREEN);
-			}else if(Piece.rand(0, 3) == 1){
+			}else if(Piece.rand(0, 2) == 1){
 				this.setColor(Color.RED);
-			}else if(Piece.rand(0, 3) == 2){
+			}else if(Piece.rand(0, 2) == 2){
 				this.setColor(Color.YELLOW);
 			}
 		}
 		
 	}
-	
-	public String toString(){
-		return "" ;
- 	}
+	/*
+	 *  
+	 * Check Pillar to word.
+	 * @return String of Pillar
+	 * 
+	 */
+	 public String toString() {
+	        String color= "";
+	        return getColorWord() + " Pillar at (" + getX() + ", " + getY() + ")";
+	    }
 
 }
